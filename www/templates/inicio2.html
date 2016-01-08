@@ -1,0 +1,23 @@
+<ion-view view-title="Contactos Chile">
+	<ion-content class="padding">
+
+    <ion-pane ng-controller="ExampleController">
+      <ion-header-bar class="bar-stable">
+        <button class="button" ng-click="getContactList()">Cargar</button>
+        <h1 class="title">Selecciona una Opción</h1>
+        <button class="button" ng-click="updateContact()">Modificar</button>
+      </ion-header-bar>
+      <ion-content>
+        <ion-list>
+          <ion-item ng-repeat="contact in contacts">
+            {{contact.displayName}}
+            :
+            {{contact.phoneNumbers[0].value}}
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-pane>
+
+	</ion-content>
+
+</ion-view>
